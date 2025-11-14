@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js project</title>
+    
+</head>
+<body style="background-color: black; color: #fff;">
+    <ul class="language">
+         
+    </ul>
+    
+</body>
+
+<script>
+    
+
+    function addlanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML =  `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+        console.log(li);
+        
+    }
+   
+    addlanguage("python")
+      
+    addlanguage("ruby")
+     
+      
+    addlanguage("kuchh bhi")
+      
+    addlanguage("badhiya")
+     
+    addlanguage("aur kya")
+     
+    addlanguage("bas")
+    // console.log(li);
+    
+ 
+
+    function addOptilanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptilanguage("hiiiiiiiiii")
+
+    function addnorlang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        // ul.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addnorlang('jhjhjkhjk')
+
+
+    //edit 
+
+    const secondlang = document.querySelector('li:nth-child(1)')
+    // console.log(secondlang);
+    
+    
+    // secondlang.innerHTML = "byyyyyy"
+    const newli = document.createElement('li')
+    newli.textContent = "tripathi"
+     secondlang.replaceWith(newli)
+    // console.log(newli);
+
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML= "<li>rahul</li>"
+
+
+// remove 
+
+const lastlang = document.querySelector("li:last-child")
+lastlang.remove()
+    
+
+
+    
+</script>
+</html>
