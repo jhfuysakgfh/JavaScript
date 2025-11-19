@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>new project event</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const int= function(str){
+        console.log(str,Date());
+        
+
+    }
+
+    // const out= function(){ document.querySelector('h1').innerHTML= 'time out ho gya';}
+    // const stop= setInterval(out)
+
+    
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     document.querySelector('h1').innerHTML= 'clicked on stop';
+    //     // clearInterval(stop)
+    //     // console.log("clicked on stop");
+
+    // })
+    //     document.querySelector('#start').addEventListener('click',function(){
+    //         // setInterval(out,1000)
+    //         // document.querySelector('h1').innerHTML= 'clicked on start';
+    //         // console.log("clicked on stop");
+    //         // console.log("chalu kar do");
+            
+    //     })
+
+        document.querySelector('#start').addEventListener('click', function(event){
+                //  body.style.backgroundColor = event.target.id
+                 console.log(event.target.id);
+                 if(event.target.id === 'start')
+                //  alert('ghchgdfzxf');
+                 document.body.style.backgroundColor = 'red';
+                 
+            })
+            
+        
+
+        
+    
+    // const stop= setInterval(int,3000,'tripathi')
+    // clearInterval(stop)
+</script>
+</html>
