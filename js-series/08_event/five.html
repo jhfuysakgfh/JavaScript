@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changebgset()">Start</button>
+    <button onclick="stopbgset()">Start</button>
+
+    <script>
+    let intid;
+        function gColor() {
+            const hexarr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+            let Color = "#";
+
+            for (let i = 0; i < 6; i++) {
+                const color = Math.floor(Math.random() * hexarr.length);
+                Color += hexarr[color];
+            }
+
+            return Color;
+        }
+
+        function changebg(){
+            const color = gColor();
+            document.body.style.backgroundColor=color; 
+            console.log(color);
+                       
+        }
+        function changebgset(){
+            let intid = setInterval(changebg, 1000);
+        }
+       function stopbgset() {
+           clearInterval(intid);
+       }
+    </script>
+
+</body>
+</html>
