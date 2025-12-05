@@ -44,7 +44,7 @@ const promiseThree= new Promise(function(resolve,reject){
 //===================   promise four        ===========================//
 const promiseFour = new Promise(function(resolve,reject){
     setTimeout(function(){
-        let error = false
+        let error = true
         if(!error){
 
             console.log("Promise Four");
@@ -64,4 +64,55 @@ const promiseFour = new Promise(function(resolve,reject){
 }).catch(function(error){
     console.log(error);
     
+}).finally(()=>{
+    console.log("resolved or reject");
+    
 })
+
+//===================   promise five        ===========================//
+
+
+const promiseFive = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = true
+        if(!error){
+
+            console.log("Promise Four");
+            resolve({name:"javascript", email:"tripathi@gmail.com"})
+        }else{
+            reject('error: JS went wrong');
+        }
+
+    },1000)
+});
+
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive
+        console.log(response);
+        
+        
+    } catch (error) {
+        console.log(error);
+        
+        
+    }
+}
+consumePromiseFive();
+
+async function getalluser() {
+    try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    console.log(response);
+    
+    // const data = response.json      //  change from string to json =============================
+    // console.log(data);
+    }catch(error){
+        console.log("E:",error);
+        
+
+    }
+    
+    
+}
+getalluser()
